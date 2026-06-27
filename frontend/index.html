@@ -291,204 +291,219 @@ Waiting for Explanation...
      ANALYTICS DASHBOARD
 =========================== -->
 
+<!-- ANALYTICS TOP ROW -->
 <section class="analytics-section">
+  <div class="analytics-grid">
 
-    <h2>Analytics Dashboard</h2>
-
-    <div class="analytics-grid">
-
-        <div class="analytics-card">
-
-            <div class="analytics-icon">👥</div>
-
-            <h3 id="totalEmployees">0</h3>
-
-            <p>Total Employees</p>
-
+    <div class="analytics-card">
+      <div class="analytics-card-inner">
+        <div>
+          <h3 id="totalEmployees" class="analytics-num">20</h3>
+          <p class="analytics-label">Total Employees</p>
         </div>
-
-        <div class="analytics-card">
-
-            <div class="analytics-icon">💰</div>
-
-            <h3 id="averageSalary">₹0</h3>
-
-            <p>Average Salary</p>
-
+        <div class="analytics-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
         </div>
-
-        <div class="analytics-card">
-
-            <div class="analytics-icon">📈</div>
-
-            <h3 id="highestSalary">₹0</h3>
-
-            <p>Highest Salary</p>
-
-        </div>
-
-        <div class="analytics-card">
-
-            <div class="analytics-icon">🏢</div>
-
-            <h3 id="departmentCount">0</h3>
-
-            <p>Departments</p>
-
-        </div>
-
+      </div>
     </div>
 
+    <div class="analytics-card">
+      <div class="analytics-card-inner">
+        <div>
+          <h3 id="averageSalary" class="analytics-num">₹78,800</h3>
+          <p class="analytics-label">Average Salary</p>
+        </div>
+        <div class="analytics-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+            <line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="analytics-card">
+      <div class="analytics-card-inner">
+        <div>
+          <h3 id="highestSalary" class="analytics-num">₹99,000</h3>
+          <p class="analytics-label">Highest Salary</p>
+        </div>
+        <div class="analytics-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="14.5 17.5 3 6 3 18 21 18 21 8 11.5 17.5"/>
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="analytics-card">
+      <div class="analytics-card-inner">
+        <div>
+          <h3 id="departmentCount" class="analytics-num">9</h3>
+          <p class="analytics-label">Departments</p>
+        </div>
+        <div class="analytics-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <!-- WHO WE ARE -->
+<section class="wwa-section">
+  <h2 class="wwa-heading">Who <span class="wwa-accent">We Are?</span></h2>
 
-<section class="about-section">
+  <div class="wwa-grid">
 
-  <!-- LEFT -->
+    <!-- LEFT CARD -->
+    <div class="wwa-card">
+      <div class="wwa-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <h3 class="wwa-card-title">AI Text To SQL Agent</h3>
+      <p class="wwa-card-subtitle">Turning Natural Language into SQL with Intelligence</p>
+      <p class="wwa-card-desc">We build intelligent solutions that bridge the gap between humans and databases. Our AI agent understands natural language and generates accurate SQL queries while ensuring security, performance and reliability.</p>
 
-  <div>
+      <ul class="wwa-features">
+        <li>
+          <span class="wwa-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <strong>Secure &amp; Reliable</strong>
+            <p>Built with strong validation and security to protect your data.</p>
+          </div>
+        </li>
+        <li>
+          <span class="wwa-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <strong>Accurate &amp; Fast</strong>
+            <p>Advanced AI models generate precise SQL in milliseconds.</p>
+          </div>
+        </li>
+        <li>
+          <span class="wwa-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <div>
+            <strong>Built for Everyone</strong>
+            <p>From beginners to experts, anyone can query with ease.</p>
+          </div>
+        </li>
+      </ul>
 
-    <h2 class="about-title">
-      Who We Are?
-    </h2>
+      <div class="wwa-tags">
+        <span>AI Powered</span>
+        <span>SQL Generation</span>
+        <span>Data Analytics</span>
+        <span>Developer Friendly</span>
+      </div>
+    </div>
 
-    <div class="bars-wrap">
+    <!-- RIGHT CARD -->
+    <div class="wwa-card">
 
-      <div class="bar-col">
-
-        <span class="bar-pct">
-          80%
-        </span>
-
-        <div
-          class="bar-fill"
-          style="height:120px;">
+      <!-- Bar chart top area -->
+      <div class="wwa-chart">
+        <div class="wwa-bar-col">
+          <span class="wwa-bar-toplabel">0–1 Years<br><span>Experience</span></span>
+          <div class="wwa-bar-wrap">
+            <div class="wwa-bar" style="height:75%;"></div>
+          </div>
+          <span class="wwa-bar-botlabel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="bar-icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Learning &amp;<br>Growing
+          </span>
         </div>
-
-        <span class="bar-lbl">
-          Usability
-        </span>
-
+        <div class="wwa-bar-col">
+          <span class="wwa-bar-toplabel">7+<br><span>Projects</span></span>
+          <div class="wwa-bar-wrap">
+            <div class="wwa-bar wwa-bar--tall" style="height:90%;"></div>
+          </div>
+          <span class="wwa-bar-botlabel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="bar-icon"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Built with<br>Passion
+          </span>
+        </div>
+        <div class="wwa-bar-col">
+          <span class="wwa-bar-toplabel">4<br><span>Live Demos</span></span>
+          <div class="wwa-bar-wrap">
+            <div class="wwa-bar wwa-bar--mid" style="height:60%;"></div>
+          </div>
+          <span class="wwa-bar-botlabel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="bar-icon"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Deployed &amp;<br>Accessible
+          </span>
+        </div>
       </div>
 
-      <div class="bar-col">
-
-        <span class="bar-pct">
-          70%
-        </span>
-
-        <div
-          class="bar-fill"
-          style="height:105px;">
+      <!-- Stat boxes bottom area -->
+      <div class="wwa-stats-row">
+        <div class="wwa-stat-box">
+          <div class="wwa-stat-box-inner">
+            <span class="wwa-stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div>
+              <div class="wwa-stat-num">1+</div>
+              <div class="wwa-stat-lbl">Years</div>
+            </div>
+          </div>
+          <div class="wwa-stat-sublbl">Hands-on Experience</div>
         </div>
-
-        <span class="bar-lbl">
-          Efficiency
-        </span>
-
+        <div class="wwa-stat-box">
+          <div class="wwa-stat-box-inner">
+            <span class="wwa-stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <div>
+              <div class="wwa-stat-num">7+</div>
+              <div class="wwa-stat-lbl">Projects</div>
+            </div>
+          </div>
+          <div class="wwa-stat-sublbl">Built End-to-End</div>
+        </div>
+        <div class="wwa-stat-box">
+          <div class="wwa-stat-box-inner">
+            <span class="wwa-stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <div>
+              <div class="wwa-stat-num">4</div>
+              <div class="wwa-stat-lbl">Live Demos</div>
+            </div>
+          </div>
+          <div class="wwa-stat-sublbl">Deployed &amp; Live</div>
+        </div>
       </div>
 
-      <div class="bar-col">
-
-        <span class="bar-pct">
-          10%
-        </span>
-
-        <div
-          class="bar-fill"
-          style="height:15px;">
-        </div>
-
-        <span class="bar-lbl">
-          Marketing
-        </span>
-
+      <!-- Footer tagline -->
+      <div class="wwa-card-footer">
+        <p>I constantly learn, build and deploy real-world projects<br>to deliver value and solve meaningful problems.</p>
+        <a class="wwa-ask-link" href="#">Ask.Analyze.Apply</a>
+        <a href="about.html"><button class="wwa-discover-btn">Discover More</button></a>
       </div>
 
     </div>
-
   </div>
-
-  <!-- RIGHT -->
-
-  <div class="stats-col">
-
-    <div class="arrow-btn">
-
-      ↗
-
-    </div>
-
-    <div class="stat-big">
-
-      <span class="num">
-        24
-      </span>
-
-      <div class="info">
-
-        <span>Years</span>
-        <span>Experience</span>
-
-      </div>
-
-    </div>
-
-    <div class="stat-row">
-
-      <div class="stat-item">
-
-        <div class="num">
-          1M
-        </div>
-
-        <div class="lbl">
-          User's
-          <br>
-          Satisfaction
-        </div>
-
-      </div>
-
-      <div class="stat-item">
-
-        <div class="num">
-          10k
-        </div>
-
-        <div class="lbl">
-          Official
-          <br>
-          Subscribers
-        </div>
-
-      </div>
-
-    </div>
-
-    <p class="about-desc">
-
-      AI Text To SQL Agent helps users
-      convert natural language into SQL
-      while safely interacting with
-      relational databases.
-
-      <br><br>
-
-      Ask.Analyze.Apply
-
-    </p>
-    <a href="about.html">
-
-    <button class="btn-discover">
-
-      Discover More
-
-    </button></a>
-
-  </div>
-
 </section>
 
 <!-- Toast Notification -->
