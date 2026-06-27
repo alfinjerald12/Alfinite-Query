@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Text To SQL Agent</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Alfinite <span>Query</span></div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="achievement.html">Achievement</a>
+    <a href="about.html">About</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-glow"></div>
+
+  <div class="hero-inner">
+
+    <p class="hero-sub">
+      Welcome to AI Database Agent
+    </p>
+
+    <h1>
+       Text To SQL
+      <br>
+      Database Agent
+    </h1>
+
+    <p class="hero-desc">
+      Convert Natural Language Into SQL Queries
+      <br>
+    </p>
+
+    <div class="hero-scroll">
+      ↓
+    </div>
+
+    <div class="hero-line"></div>
+
+  </div>
+
+</section>
+
+<!-- FEATURE CARDS -->
+
+<div class="feature-cards">
+
+  <!-- Restricted -->
+
+  <div
+    class="fcard active-card"
+    id="restrictedCard">
+
+    <div class="fcard-icon">
+
+      🔒
+
+    </div>
+
+    <h3>Restricted Query</h3>
+
+    <p>
+      Safe Database Mode.
+      Executes only validated queries.
+    </p>
+
+    <div class="fcard-link">
+      Active Database Agent →
+    </div>
+
+  </div>
+
+  <!-- All Query -->
+
+  <div
+    class="fcard"
+    id="allQueryCard">
+
+    <div class="fcard-icon">
+
+      ⚡
+
+    </div>
+
+    <h3>All Query</h3>
+
+    <p>
+      Generate any SQL query without restrictions.
+    </p>
+
+    <div class="fcard-link">
+      SQL Generator →
+    </div>
+
+  </div>
+
+</div>
+
+<!-- QUERY SECTION -->
+
+<section class="query-section">
+
+  <div class="query-card">
+
+    <h2>
+      Ask Database
+    </h2>
+
+    <textarea
+      id="question"
+      placeholder="Example: Show employee in IT department"
+    ></textarea>
+
+     <div class="input-group">
+
+    <input style="background-color:#17172c;cursor: pointer;border:none;color:white;"
+        id="question"
+        type="text"
+        placeholder="Ask your question..."
+    >
+
+    <button id="voiceBtn" style="background-color:#17172c;cursor: pointer;border:none;color:white;">
+        🎤
+    </button>
+
+</div>  
+
+    <button id="generateBtn">
+
+    <span id="btnText">
+        Generate SQL
+    </span>
+
+    <span id="loader" class="loader hidden"></span>
+
+</button>
+
+  </div>
+
+</section>
+
+<!-- SQL OUTPUT -->
+
+<!-- =========================
+     GENERATED SQL
+========================= -->
+
+<section class="sql-section">
+
+    <div class="sql-header">
+
+        <h2>Generated SQL</h2>
+
+        <button id="copySQLBtn">
+
+            📋 Copy SQL
+
+        </button>
+
+    </div>
+
+    <pre id="sqlOutput">
+
+Awaiting Query...
+
+    </pre>
+
+</section>
+
+</div>
+<!-- Export Buttons -->
+
+<div class="export-buttons">
+
+    <button id="exportCSV">
+        📄 Export CSV
+    </button>
+
+    <button id="exportJSON">
+        📁 Export JSON
+    </button>
+
+</div>
+
+<section class="sql-section">
+
+    <h2>
+         AI Explanation
+    </h2>
+
+    <pre id="sqlExplanation">
+
+Waiting for Explanation...
+
+    </pre>
+
+</section>
+
+</section>
+<!-- RESULTS -->
+
+<!-- RESULTS -->
+
+<section class="results-section">
+
+  <h2>
+    Results
+  </h2>
+
+  <div id="tableContainer">
+
+    No Results Yet
+
+  </div>
+
+</section>
+
+<div class="history-sidebar">
+
+    <div class="history-header">
+
+        <h3>🕘 Recent Queries</h3>
+
+        <button id="clearHistory">
+            Clear
+        </button>
+
+    </div>
+
+    <ul id="historyList">
+
+    </ul>
+
+</div>
+
+</section>
+
+<!-- ===========================
+     QUERY VISUALIZATION
+=========================== -->
+
+   <section class="visualization-section">
+
+    <div class="visualization-header">
+
+        <h2> Visualization</h2>
+
+        <div class="chart-toolbar">
+
+            <button class="chart-btn active" data-chart="auto"> Auto</button>
+
+            <button class="chart-btn" data-chart="bar"> Bar</button>
+
+            <button class="chart-btn" data-chart="pie"> Pie</button>
+
+            <button class="chart-btn" data-chart="line"> Line</button>
+
+            <button class="chart-btn" data-chart="table"> Table</button>
+
+        </div>
+
+    </div>
+
+    <div id="chartContainer" class="chart-container"></div>
+
+</section>
+
+</section>
+<!-- ===========================
+     ANALYTICS DASHBOARD
+=========================== -->
+
+<section class="analytics-section">
+
+    <h2>Analytics Dashboard</h2>
+
+    <div class="analytics-grid">
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon">👥</div>
+
+            <h3 id="totalEmployees">0</h3>
+
+            <p>Total Employees</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon">💰</div>
+
+            <h3 id="averageSalary">₹0</h3>
+
+            <p>Average Salary</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon">📈</div>
+
+            <h3 id="highestSalary">₹0</h3>
+
+            <p>Highest Salary</p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <div class="analytics-icon">🏢</div>
+
+            <h3 id="departmentCount">0</h3>
+
+            <p>Departments</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHO WE ARE -->
+
+<section class="about-section">
+
+  <!-- LEFT -->
+
+  <div>
+
+    <h2 class="about-title">
+      Who We Are?
+    </h2>
+
+    <div class="bars-wrap">
+
+      <div class="bar-col">
+
+        <span class="bar-pct">
+          80%
+        </span>
+
+        <div
+          class="bar-fill"
+          style="height:120px;">
+        </div>
+
+        <span class="bar-lbl">
+          Usability
+        </span>
+
+      </div>
+
+      <div class="bar-col">
+
+        <span class="bar-pct">
+          70%
+        </span>
+
+        <div
+          class="bar-fill"
+          style="height:105px;">
+        </div>
+
+        <span class="bar-lbl">
+          Efficiency
+        </span>
+
+      </div>
+
+      <div class="bar-col">
+
+        <span class="bar-pct">
+          10%
+        </span>
+
+        <div
+          class="bar-fill"
+          style="height:15px;">
+        </div>
+
+        <span class="bar-lbl">
+          Marketing
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+
+  <div class="stats-col">
+
+    <div class="arrow-btn">
+
+      ↗
+
+    </div>
+
+    <div class="stat-big">
+
+      <span class="num">
+        24
+      </span>
+
+      <div class="info">
+
+        <span>Years</span>
+        <span>Experience</span>
+
+      </div>
+
+    </div>
+
+    <div class="stat-row">
+
+      <div class="stat-item">
+
+        <div class="num">
+          1M
+        </div>
+
+        <div class="lbl">
+          User's
+          <br>
+          Satisfaction
+        </div>
+
+      </div>
+
+      <div class="stat-item">
+
+        <div class="num">
+          10k
+        </div>
+
+        <div class="lbl">
+          Official
+          <br>
+          Subscribers
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="about-desc">
+
+      AI Text To SQL Agent helps users
+      convert natural language into SQL
+      while safely interacting with
+      relational databases.
+
+      <br><br>
+
+      Ask.Analyze.Apply
+
+    </p>
+    <a href="about.html">
+
+    <button class="btn-discover">
+
+      Discover More
+
+    </button></a>
+
+  </div>
+
+</section>
+
+<!-- Toast Notification -->
+
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/state.js"></script>
+
+<script src="js/loading.js"></script>
+<script src="js/typing.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/table.js"></script>
+<script src="js/history.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/api.js"></script>
+<script src="js/export.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
