@@ -1,7 +1,7 @@
 async function loadDashboard(){
 
     const response = await fetch(
-        "http://127.0.0.1:8000/analytics"
+        "https://alfinite-query.onrender.com/analytics"
     );
 
     const data = await response.json();
