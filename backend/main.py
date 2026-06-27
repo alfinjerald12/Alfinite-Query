@@ -7,12 +7,19 @@ from backend.groq_service import generate_sql, explain_sql
 from backend.sql_validator import validate_sql
 from backend.query_executor import execute_query
 from backend.analytics import get_dashboard_data
+from fastapi import FastAPI, Response
+
+
 
 app = FastAPI()
 
 # -----------------------------
 # CORS
 # -----------------------------
+
+@app.head("/")
+def health_check():
+    return Response(status_code=200)
 
 app.add_middleware(
     CORSMiddleware,
