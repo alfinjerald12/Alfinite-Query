@@ -17,8 +17,8 @@ app = FastAPI()
 # CORS
 # -----------------------------
 
-@app.head("/")
-def health_check():
+@app.head("/health")
+def health_head():
     return Response(status_code=200)
 
 @app.get("/health")
