@@ -1136,3 +1136,980 @@ transform:translateX(0);
     margin-bottom:20px;
 
 }
+/*=========================================
+ RESPONSIVE BASE
+=========================================*/
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+table{
+
+    max-width:100%;
+
+}
+
+canvas{
+
+    max-width:100% !important;
+
+}
+
+pre{
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+textarea,
+input{
+
+    max-width:100%;
+
+}
+
+button{
+
+    cursor:pointer;
+
+}
+/*=========================================
+ LARGE LAPTOP
+=========================================*/
+
+@media(max-width:1200px){
+
+.container,
+.hero,
+.query-section,
+.sql-section,
+.results-section,
+.analytics-section,
+.visualization-section,
+.about-section{
+
+    padding-left:5%;
+    padding-right:5%;
+
+}
+
+}
+/*=========================================
+ TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.feature-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.analytics-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.about-section{
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+}
+
+.hero h1{
+
+    font-size:60px;
+
+}
+
+}
+/*=========================================
+ MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.hero-desc{
+
+    font-size:17px;
+
+}
+
+.query-card{
+
+    padding:25px;
+
+}
+
+.analytics-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.chart-toolbar{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.sql-header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+}
+
+.export-buttons{
+
+    flex-direction:column;
+
+}
+
+}
+/*=========================================
+ SMALL PHONE
+=========================================*/
+
+@media(max-width:576px){
+
+.hero{
+
+    padding:80px 20px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero-desc{
+
+    font-size:15px;
+
+}
+
+textarea{
+
+    min-height:150px;
+
+}
+
+button{
+
+    width:100%;
+
+}
+
+.analytics-card{
+
+    padding:25px;
+
+}
+
+}
+/*=================================
+RESPONSIVE NAVBAR
+==================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:32px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+    padding:18px 25px;
+
+    position:relative;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:75px;
+
+    left:0;
+
+    width:100%;
+
+    background:#121224;
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:30px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+}
+
+.nav-links.show{
+
+    display:flex;
+
+}
+
+}
+/*==================================================
+        RESPONSIVE HOME LAYOUT
+===================================================*/
+
+/* ---------- Laptop ---------- */
+
+@media (max-width:1200px){
+
+.query-section,
+.sql-section,
+.results-section,
+.analytics-section,
+.visualization-section{
+
+    padding:0 40px;
+
+}
+
+.feature-cards{
+
+    max-width:100%;
+
+    padding:20px 40px 60px;
+
+}
+
+.about-section{
+
+    padding:30px 40px 80px;
+
+}
+
+.history-sidebar{
+
+    display:none;
+
+}
+
+.export-buttons{
+
+    padding-right:0;
+
+    justify-content:flex-end;
+
+}
+
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:992px){
+
+.hero{
+
+    padding:80px 30px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.feature-cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-section{
+
+    grid-template-columns:1fr;
+
+}
+
+.analytics-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.query-section,
+.sql-section,
+.results-section,
+.analytics-section,
+.visualization-section{
+
+    padding:0 30px;
+
+}
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+.hero{
+
+    padding:70px 20px;
+
+}
+
+.hero-glow{
+
+    width:320px;
+
+    height:320px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero-desc{
+
+    font-size:15px;
+
+}
+
+.feature-cards{
+
+    padding:20px;
+
+}
+
+.query-section,
+.sql-section,
+.results-section,
+.analytics-section,
+.visualization-section{
+
+    padding:0 20px;
+
+}
+
+.query-card{
+
+    padding:20px;
+
+}
+
+.sql-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.export-buttons{
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+.export-buttons button{
+
+    width:100%;
+
+}
+
+.analytics-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.chart-toolbar{
+
+    flex-wrap:wrap;
+
+}
+
+.chart-btn{
+
+    flex:1;
+
+    min-width:90px;
+
+}
+
+.chart-container{
+
+    height:320px;
+
+}
+
+}
+.history-sidebar{
+
+    display:none;
+
+}
+
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:576px){
+
+.hero h1{
+
+    font-size:30px;
+
+}
+
+.hero-sub{
+
+    font-size:12px;
+
+}
+
+.hero-desc{
+
+    font-size:14px;
+
+}
+
+.query-card{
+
+    padding:18px;
+
+}
+
+#generateBtn{
+
+    width:100%;
+
+}
+
+#copySQLBtn{
+
+    width:100%;
+
+}
+
+.chart-container{
+
+    height:260px;
+
+}
+
+.analytics-card{
+
+    padding:20px;
+
+}
+
+}
+/*==================================================
+      RESPONSIVE QUERY & SQL SECTION
+===================================================*/
+
+@media(max-width:768px){
+
+/* Query Input */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    font-size:16px;
+
+}
+
+.input-group button{
+
+    width:100%;
+
+    height:52px;
+
+}
+
+/* Generate Button */
+
+#generateBtn{
+
+    width:100%;
+
+}
+
+/* SQL Header */
+
+.sql-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+#copySQLBtn{
+
+    width:100%;
+
+}
+
+/* SQL Output */
+
+.sql-section pre{
+
+    padding:18px;
+
+    font-size:14px;
+
+    overflow:auto;
+
+}
+
+/* AI Explanation */
+
+#sqlExplanation{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/* Export Buttons */
+
+.export-buttons{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding-right:0;
+
+}
+
+.export-buttons button{
+
+    width:100%;
+
+}
+
+/* Results Table */
+
+#tableContainer{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+.results-section table{
+
+    min-width:650px;
+
+}
+
+/* Visualization */
+
+.visualization-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.chart-toolbar{
+
+    width:100%;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.chart-btn{
+
+    flex:1;
+
+    min-width:85px;
+
+}
+
+.chart-container{
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+}
+
+
+/*==========================================
+      EXTRA SMALL PHONES
+==========================================*/
+
+@media(max-width:576px){
+
+.query-card h2{
+
+    font-size:22px;
+
+}
+
+.sql-section h2{
+
+    font-size:22px;
+
+}
+
+.results-section h2{
+
+    font-size:22px;
+
+}
+
+.analytics-section h2{
+
+    font-size:22px;
+
+}
+
+.visualization-header h2{
+
+    font-size:22px;
+
+}
+
+.input-group input{
+
+    font-size:15px;
+
+}
+
+.sql-section pre{
+
+    font-size:13px;
+
+}
+
+#sqlExplanation{
+
+    font-size:13px;
+
+}
+
+}
+/*==================================================
+      RESPONSIVE ABOUT + FOOTER + FINAL FIXES
+===================================================*/
+
+/* ---------- Tablet ---------- */
+
+@media(max-width:992px){
+
+/* ABOUT */
+
+.about-section{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+    text-align:center;
+
+}
+
+.about-title{
+
+    font-size:32px;
+
+}
+
+.bars-wrap{
+
+    justify-content:center;
+
+}
+
+.stats-col{
+
+    align-items:center;
+
+}
+
+.arrow-btn{
+
+    margin:0 auto 30px;
+
+}
+
+.stat-big{
+
+    justify-content:center;
+
+}
+
+.stat-row{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+}
+
+.about-desc{
+
+    max-width:700px;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media(max-width:768px){
+
+.about-section{
+
+    padding:50px 20px;
+
+}
+
+.about-title{
+
+    font-size:28px;
+
+}
+
+.bars-wrap{
+
+    overflow-x:auto;
+
+    justify-content:flex-start;
+
+    padding-bottom:15px;
+
+}
+
+.bar-fill{
+
+    width:60px;
+
+}
+
+.stat-big .num{
+
+    font-size:42px;
+
+}
+
+.stat-item .num{
+
+    font-size:30px;
+
+}
+
+.about-desc{
+
+    font-size:15px;
+
+}
+
+.btn-discover{
+
+    width:100%;
+
+}
+
+/* FOOTER */
+
+.footer{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.footer-links{
+
+    justify-content:center;
+
+}
+
+.footer-social{
+
+    justify-content:center;
+
+}
+
+}
+
+
+/* ---------- Small Phones ---------- */
+
+@media(max-width:576px){
+
+.about-title{
+
+    font-size:24px;
+
+}
+
+.bar-fill{
+
+    width:45px;
+
+}
+
+.bar-lbl{
+
+    font-size:10px;
+
+}
+
+.stat-big .num{
+
+    font-size:36px;
+
+}
+
+.stat-item .num{
+
+    font-size:24px;
+
+}
+
+.about-desc{
+
+    font-size:14px;
+
+}
+
+.footer{
+
+    padding:40px 20px;
+
+}
+
+.footer h3{
+
+    font-size:20px;
+
+}
+
+.footer p,
+
+.footer a{
+
+    font-size:14px;
+
+}
+
+}
