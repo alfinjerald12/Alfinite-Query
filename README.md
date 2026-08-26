@@ -1,0 +1,7 @@
+TO RUN THIS PROJECT OR TO ACTIVATE THE BACKEND USE THE BELOW COMMAND
+
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
+
+TO TEST LOCALLY USE THE BELOW COMMAND
+
+http://127.0.0.1:8000/docs

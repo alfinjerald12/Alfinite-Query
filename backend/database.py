@@ -1,9 +1,11 @@
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from pathlib import Path
 from urllib.parse import quote_plus
 import os
 
-load_dotenv()
+# Load .env from backend folder
+load_dotenv(Path(__file__).parent / ".env")
 
 db_user = os.getenv("DB_USER")
 db_password = quote_plus(os.getenv("DB_PASSWORD", ""))
